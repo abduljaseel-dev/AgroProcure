@@ -1,0 +1,31 @@
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Local database credentials
+/config/database.php
+
+# Database backups and exports
+*.sql
+*.sql.gz
+*.dump
+*.bak
+
+# Logs and runtime files
+*.log
+/storage/*
+!/storage/README.md
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.DS_Store
+Thumbs.db
+
+# IDE and operating-system files
+.vscode/
+.idea/
+/public/test-db.php

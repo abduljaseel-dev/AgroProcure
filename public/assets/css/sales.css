@@ -1,0 +1,255 @@
+
+/* AgroProcure Vendor Sales — isolated styles */
+
+.sales-page,
+.sales-page * {
+    box-sizing: border-box;
+}
+
+.sales-page {
+    width: min(1500px, calc(100% - 40px));
+    margin: 28px auto;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.sales-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    background: #123653;
+    color: #fff;
+}
+
+.sales-header h1 {
+    margin: 8px 0;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.2;
+}
+
+.sales-header p {
+    margin: 6px 0 0;
+    color: #dce8f0;
+}
+
+.sales-header .sales-eyebrow {
+    color: #e8c879;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sales-back-link {
+    display: inline-block;
+    padding: 11px 16px;
+    border: 1px solid #b8ccda;
+    border-radius: 7px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sales-back-link:hover {
+    background: #214c69;
+}
+
+.sales-card {
+    padding: 25px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+.sales-card h2 {
+    margin: 0 0 8px;
+    color: #123653;
+    font-size: 21px;
+}
+
+.sales-description {
+    margin: 0 0 22px;
+    color: #64748b;
+}
+
+.sales-notice {
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.sales-notice-success {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.sales-notice-error {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+.sales-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.sales-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sales-field label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sales-field input,
+.sales-field select,
+.sales-table select,
+.sales-table input {
+    width: 100%;
+    min-width: 100px;
+    min-height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+}
+
+.sales-field input:focus,
+.sales-field select:focus,
+.sales-table select:focus,
+.sales-table input:focus {
+    outline: 2px solid #8ab4d0;
+    outline-offset: 1px;
+    border-color: #245b7d;
+}
+
+.sales-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.sales-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.sales-table th,
+.sales-table td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.sales-table th {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.sales-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.sales-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.sales-stock-option {
+    max-width: 360px;
+}
+
+.sales-available {
+    min-width: 100px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.sales-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 7px;
+    background: #174c70;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sales-button:hover {
+    background: #103650;
+}
+
+.sales-button:focus-visible,
+.sales-back-link:focus-visible {
+    outline: 3px solid #e8c879;
+    outline-offset: 3px;
+}
+
+.sales-status {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sales-muted {
+    color: #64748b;
+}
+
+@media (max-width: 700px) {
+    .sales-page {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+
+    .sales-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 21px;
+    }
+
+    .sales-card {
+        padding: 17px;
+    }
+
+    .sales-form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sales-button {
+        width: 100%;
+    }
+}

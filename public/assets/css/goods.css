@@ -1,0 +1,271 @@
+/* AgroProcure — Goods Master */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #1e293b;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.farmers-page {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.farmers-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding: 30px 34px;
+    color: #fff;
+    background: linear-gradient(135deg, #102c4a, #174c70);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(15, 41, 66, 0.12);
+}
+
+.farmers-header h1 {
+    margin: 5px 0 8px;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.2;
+}
+
+.farmers-header p {
+    margin: 0;
+    color: #e0eaf3;
+}
+
+.farmers-header .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: #f3d28b;
+}
+
+.back-link {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 11px 17px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.farmers-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.farmer-form-card,
+.farmer-list-card {
+    min-width: 0;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(15, 41, 66, 0.05);
+}
+
+.farmer-form-card h2,
+.farmer-list-card h2 {
+    margin: 0 0 20px;
+    color: #102c4a;
+    font-size: 21px;
+}
+
+.farmer-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.farmer-form-card label {
+    margin-top: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.farmer-form-card input,
+.farmer-form-card select,
+.farmer-form-card textarea,
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 13px;
+    color: #1e293b;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+}
+
+.farmer-form-card input:focus,
+.farmer-form-card select:focus,
+.farmer-form-card textarea:focus,
+.search-form input:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.13);
+    border-color: #2563eb;
+}
+
+.farmer-form-card textarea {
+    resize: vertical;
+}
+
+.farmer-form-card button,
+.search-form button {
+    padding: 12px 17px;
+    color: #fff;
+    background: #174c70;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.farmer-form-card button {
+    margin-top: 12px;
+}
+
+.farmer-form-card button:hover,
+.search-form button:hover {
+    background: #103653;
+}
+
+.list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.list-heading h2 {
+    margin-bottom: 4px;
+}
+
+.list-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.count-badge {
+    flex-shrink: 0;
+    padding: 6px 11px;
+    color: #174c70;
+    background: #e8f1f8;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form button {
+    flex-shrink: 0;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+}
+
+.table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table-wrap th {
+    padding: 14px 13px;
+    color: #334155;
+    background: #f1f5f9;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.table-wrap td {
+    padding: 14px 13px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.table-wrap tbody tr:hover {
+    background: #f8fafc;
+}
+
+.message {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.message.error {
+    color: #991b1b;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.message.success {
+    color: #166534;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+@media (max-width: 900px) {
+    .farmers-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .farmers-page {
+        padding: 14px;
+    }
+
+    .farmers-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px;
+    }
+
+    .farmer-form-card,
+    .farmer-list-card {
+        padding: 19px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+}
